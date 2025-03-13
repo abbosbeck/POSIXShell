@@ -3,6 +3,14 @@
     Console.Write("$ ");
     var command = Console.ReadLine();
 
-    Console.WriteLine($"{command}: command not found");
+    if(command == "exit")
+    {
+        Environment.Exit(0);
+    }
+    else
+    {
+        Console.WriteLine($"{command}: command not found");
+    }
+
 }
 
