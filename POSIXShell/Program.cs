@@ -1,6 +1,8 @@
-﻿Console.Write("$ ");
-var command = Console.ReadLine();
+﻿while (true)
+{
+    Console.Write("$ ");
+    var command = Console.ReadLine();
 
-Console.WriteLine($"{command}: command not found");
+    Console.WriteLine($"{command}: command not found");
+}
 
-Console.ReadLine();
