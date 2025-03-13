@@ -13,7 +13,7 @@
     }else if (command.StartsWith("type"))
     {
         command = command.Substring(5);
-        if (command == "exit" || command == "echo")
+        if (command == "exit" || command == "echo" || command == "type")
         {
             Console.WriteLine($"{command} is a shell builtin");
         }
