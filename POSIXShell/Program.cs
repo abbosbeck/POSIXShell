@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.Write("$ ");
+var command = Console.ReadLine();
+
+Console.WriteLine($"{command}: command not found");
+
+Console.ReadLine();
