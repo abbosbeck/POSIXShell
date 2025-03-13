@@ -6,6 +6,10 @@
     if(command == "exit")
     {
         Environment.Exit(0);
+    }else if (command.StartsWith("echo"))
+    {
+        command = command.Substring(5);
+        Console.WriteLine(command);
     }
     else
     {
