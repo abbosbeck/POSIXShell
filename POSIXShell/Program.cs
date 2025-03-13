@@ -10,6 +10,17 @@
     {
         command = command.Substring(5);
         Console.WriteLine(command);
+    }else if (command.StartsWith("type"))
+    {
+        command = command.Substring(5);
+        if (command == "exit" || command == "echo")
+        {
+            Console.WriteLine($"{command} is a shell builtin");
+        }
+        else
+        {
+            Console.WriteLine($"{command}: not found");
+        }
     }
     else
     {
