@@ -15,7 +15,23 @@
             }
             else
             {
-                Console.WriteLine($"{command}: not found");
+                var pathsStr = Environment.GetEnvironmentVariable("PATH");
+                var pathsArr = pathsStr.Split(":");
+                bool isFound = false;
+                foreach (var path in pathsArr)
+                {
+                    var joinedPath = Path.Join(path, command);
+                    if (File.Exists(joinedPath))
+                    {
+                        isFound = true;
+                        Console.WriteLine($"{command} is {joinedPath}");
+                        break;
+                    }
+                }
+                if (!isFound)
+                {
+                    Console.WriteLine($"{command}: not found");
+                }
             }
         }
     }
