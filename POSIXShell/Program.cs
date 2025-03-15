@@ -1,5 +1,4 @@
 ﻿using POSIXShell.Factories;
-using POSIXShell.Factories.Commands;
 
 while (true)
 {

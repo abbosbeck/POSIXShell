@@ -8,11 +8,12 @@
         }
         public void Run(string command)
         {
-            if(command == "color a")
+            if (command == "color a")
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("cheking text");
-            }else if (command == "color r")
+            }
+            else if (command == "color r")
             {
                 Console.ForegroundColor = ConsoleColor.Red;
             }
