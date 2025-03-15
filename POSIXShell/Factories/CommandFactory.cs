@@ -16,6 +16,7 @@ namespace POSIXShell.Factories
                 "exit" => new ExitCommand(),
                 "echo" => new EchoCommand(commandName),
                 "color" => new ColorCommand(commandName),
+                "cls" => new CleanConsoleCommand(commandName),
                 _ => new NoCommand(commandName),
             };
         }
