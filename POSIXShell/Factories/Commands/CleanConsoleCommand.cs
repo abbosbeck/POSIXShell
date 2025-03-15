@@ -8,7 +8,7 @@
         }
         public void Run(string command)
         {
-            throw new NotImplementedException();
+            Console.Clear();
         }
     }
 }
