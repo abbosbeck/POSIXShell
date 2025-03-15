@@ -14,7 +14,8 @@ namespace POSIXShell.Factories
             {
                 "type" => new TypeCommand(commandName),
                 "exit" => new ExitCommand(),
-                "echo" =>new EchoCommand(commandName),
+                "echo" => new EchoCommand(commandName),
+                "color" => new ColorCommand(commandName),
                 _ => new NoCommand(commandName),
             };
         }
