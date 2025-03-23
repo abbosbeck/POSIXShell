@@ -11,7 +11,6 @@ namespace POSIXShell.Factories.Commands.ScriptingSupport
         }
         public async void Run(string command)
         {
-           command = command.Substring(5);
            var a =  await RunScript(command);
 
            Console.WriteLine(a);

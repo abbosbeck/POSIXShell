@@ -10,6 +10,7 @@ namespace POSIXShell.Factories
             ReadOnlySpan<char> span = commandName.AsSpan();
             int spaceIndex = span.IndexOf(' ');
             string commandType = spaceIndex == -1 ? commandName : new string(span.Slice(0, spaceIndex));
+            commandName = commandName.Substring(5);
 
             return commandType switch
             {
