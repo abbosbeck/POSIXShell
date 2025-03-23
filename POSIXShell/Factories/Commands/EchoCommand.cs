@@ -8,7 +8,6 @@
         }
         public void Run(string command)
         {
-            command = command.Substring(5);
             Console.WriteLine(command);
         }
     }
