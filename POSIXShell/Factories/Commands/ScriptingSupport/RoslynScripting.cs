@@ -3,8 +3,20 @@ using Microsoft.CodeAnalysis.Scripting;
 
 namespace POSIXShell.Factories.Commands.ScriptingSupport
 {
-    public class RoslynScripting
+    public class RoslynScripting : IRun
     {
+        public RoslynScripting(string code)
+        {
+            Run(code);
+        }
+        public async void Run(string command)
+        {
+           command = command.Substring(5);
+           var a =  await RunScript(command);
+
+           Console.WriteLine(a);
+        }
+
         public static async Task<object> RunScript(string code)
         {
             return await CSharpScript.EvaluateAsync(code, ScriptOptions.Default);

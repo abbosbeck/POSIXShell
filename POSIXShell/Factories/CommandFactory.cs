@@ -1,4 +1,5 @@
 ﻿using POSIXShell.Factories.Commands;
+using POSIXShell.Factories.Commands.ScriptingSupport;
 
 namespace POSIXShell.Factories
 {
@@ -17,6 +18,9 @@ namespace POSIXShell.Factories
                 "echo" => new EchoCommand(commandName),
                 "color" => new ColorCommand(commandName),
                 "cls" => new CleanConsoleCommand(commandName),
+
+                "code" => new RoslynScripting(commandName),
+
                 _ => new NoCommand(commandName),
             };
         }
